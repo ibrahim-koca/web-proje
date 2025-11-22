@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #141414;
+    min-height: 100vh;
+}
+
+.container .navbar{
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo{
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.navbar .logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f3f3f3;
+}
+
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px;
+    margin-top: 30px;
+}
+
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 13px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.navbar ul li a:hover{
+    background-color: white;
+    color: #e50914;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.search-box{
+    float: right;
+    margin-top: 28px;
+    margin-right: 20px;
+}
+
+.search-box input{
+    padding: 8px;
+    width: 275px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-box button{
+    padding: 8px 15px;
+    background-color: white;
+    color: #e50914;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover{
+    background-color: #e50914;
+    color: white;
+}
+
+.hero{
+    clear: both;
+    height: 410px;
+    background-image: linear-gradient(to right, rgba(0,0,0, 0.8), rgba(0,0,0, 0.1)), url(avengersBanner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding-top: 150px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: white;
+}
+
+.hero .hero-text {
+    float: left; 
+    width: 60%; 
+}
+
+.hero h1{
+    font-size: 60px;
+    font-family: 'Arial Black', sans-serif; 
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+}
+
+.hero p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.hero .fragmanbutton{
+    float: right;
+    width: 30%;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.fragmanbutton button{
+    padding: 15px 30px; 
+    font-size: 18px;
+    color: white;
+    background-color: #e50914; 
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+}
+
+.fragmanbutton button:hover{
+    background-color: white;
+    color: #e50914;
+    transform: scale(1.05);
+}
