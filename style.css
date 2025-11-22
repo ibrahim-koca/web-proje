@@ -90,7 +90,10 @@
 .hero{
     clear: both;
     height: 410px;
-    background-image: linear-gradient(to right, rgba(0,0,0, 0.8), rgba(0,0,0, 0.1)), url(avengersBanner.jpeg);
+   background-image: 
+        linear-gradient(to top, #141414 0%, rgba(20, 20, 20, 0) 20%),
+        linear-gradient(to right, rgba(0,0,0, 0.9), rgba(0,0,0, 0.1)),
+        url(avengersBanner.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -126,20 +129,22 @@
     margin-top: 20px;
 }
 
-.fragmanbutton button{
+.hero .fragmanbutton a{
+    display: inline-block; 
     padding: 15px 30px; 
     font-size: 18px;
-    color: white;
-    background-color: #e50914; 
-    border: none;
+    font-family: sans-serif; 
+    font-weight: bold; 
+    color: white; 
+    background-color: #e50914;
+    text-decoration: none;
     border-radius: 50px; 
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-    box-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4); 
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
-.fragmanbutton button:hover{
-    background-color: white;
-    color: #e50914;
-    transform: scale(1.05);
+.hero .fragmanbutton a:hover {
+    background-color: white; 
+    color: #e50914; 
+    transform: scale(1.05); 
 }
