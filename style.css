@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Tüm elementlerde padding/border taşmasını engellemek için */
+}
+
+body{
+    background-color: #141414; 
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .navbar{
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .logo{
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.navbar .logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f3f3f3;
+}
+
+.logo a span{
+    color: #e50914;
+}
+
+.navbar .logo a:hover{
+    color: #f3f3f3;
+    text-shadow: 0 0 15px rgba(229, 9, 20, 0.8);
+}
+
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 8px;
+    margin-top: 30px;
+}
+
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 13px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.navbar ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e50914;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.search-box{
+    float: right;
+    margin-top: 28px;
+    margin-right: 20px;
+}
+
+.search-box input{
+    padding: 8px;
+    width: 275px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-box button{
+    padding: 8px 15px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover{
+    background-color: #e50914;
+    color: white;
+}
+
+
+/*-- HERO SECTION BANNER KISMI --*/
+.hero{
+    clear: both;        /* Float etkisini temizle (Navbar'ın altına girmesin) */
+    height: 410px;
+    background-image:   /* Çoklu Arkaplan: Önce karartma efekti, sonra resim */
+        linear-gradient(to top, #141414 0%, rgba(20, 20, 20, 0) 20%), /* en alt noktada siyah, resmin %20'sine geldiğinde şeffafsın */
+        linear-gradient(to right, rgba(0,0,0, 0.9), rgba(0,0,0, 0.1)),
+        url(resimler/avengersBanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    padding-top: 150px;
+    padding-left: 80px;
+    padding-right: 80px;
+    color: white;
+}
+
+.hero .hero-text {
+    float: left; 
+    width: 60%; 
+}
+
+.hero h1{
+    font-size: 60px;
+    font-family: 'Arial Black', sans-serif; 
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+}
+
+.hero p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.hero .fragmanbutton{
+    float: right;
+    width: 30%;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.hero .fragmanbutton a{
+    display: inline-block; 
+    padding: 15px 30px; 
+    font-size: 18px;
+    font-family: sans-serif; 
+    font-weight: bold; 
+    color: white; 
+    background-color: #e50914;
+    text-decoration: none;
+    border-radius: 50px; 
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4); 
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.hero .fragmanbutton a:hover {
+    background-color: white; 
+    color: #e50914;
+    transform: scale(1.05); 
+}
+
+/*--- İÇERİK ALANI MAIN BOLUM ---*/
+
+.icerik-alani {
+    width: 100%;
+    overflow: auto; /* İçindeki float'lı elemanlar taşmasını engellemek için */
+    padding: 50px 80px;
+}
+
+.filmler{
+    width: 70%;
+    float: left;
+}
+
+.icerik-alani h2, 
+.icerik-alani h3 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-left: 5px solid #e50914;
+    padding-left: 15px;
+    margin-top: 0; 
+    margin-bottom: 25px;
+}
+
+.icerik-alani h3 {
+    font-size: 20px;
+}
+
+.film-kart {
+    float: left;          /* Yan yana gelmeleri için */
+    width: 30%;           /* 3 tane sığması için %30 (Toplam %90 eder) */
+    height: 450px;
+    background-color: #222;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-right: 3%;     /* Aradaki boşluklar */
+    margin-bottom: 30px; 
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+    transition: transform 0.3s;
+}
+
+.film-kart a {
+    display: block; /* Linki bir kutu gibi davranmaya zorlar (Tüm alanı kaplar) */
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    padding: 15px;
+}
+
+.film-kart:hover {
+    transform: translateY(-10px); /* Kartı 10px yukarı kaldırır */
+    box-shadow: 0 15px 30px rgba(0,0,0, 0.7); /* Gölgeyi derinleştirir */
+    background-color: #333;
+}
+
+.film-kart img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.film-kart h4 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    text-align: center; 
+}
+
+/* !!! Her satırın sonundaki (3. kart) boşluğu sıfırla ki aşağı kaymasın. !!! */
+.film-kart:nth-of-type(3n){
+    margin-right: 0;                
+}
+
+.yan-menu{
+    width: 25%; /* 30 değil 25 çünkü filmler ve yan-menu aarsında boşluk kalmalı. */
+    float: right;
+}
+
+
+.yan-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.yan-menu ul li{
+    margin-bottom: 10px;
+}
+
+.yan-menu ul li a{
+    display: block; /* Tüm satırı kapla*/
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.yan-menu ul li a:hover{
+    color: #e50914;
+    padding-left: 15px;                /* Sağa kayma efekti */
+    border-bottom-color: #e50914;    /* Çizgiyi de kırmızı yapmak için */
+    background: none;
+    box-shadow: none;
+}
+
+/* FOOTER KISMI */
+footer{
+    clear: both; /* Yukarıdaki float karmaşasını bitir, aşağı geç */
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #777;
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+}
+
+/* --- Taranmasını istemediğimiz alanlar --- */
+.navbar, .logo, .yan-menu h3, .icerik-alani h2, button, 
+.fragmanbutton a, .search-box button, .yan-menu ul li, footer{
+    -webkit-user-select: none; /* Chrome/Safari için */
+    -moz-user-select: none;    /* Firefox için */
+    -ms-user-select: none;     /* Internet Explorer/Edge için */
+    user-select: none;         /* Standart */
+}
+
+.navbar, .logo, .yan-menu h3, .icerik-alani h2, footer{
+    cursor: default;           /* Üzerine gelince normal ok çıksın */
+}
+
+
+/* --- GİRİŞ YAP / KAYIT OL SAYFALARI --- */
+/* 1. Kutunun Kendisi */
+.giris-kutusu {
+    width: 400px;
+    margin: 50px auto; /* Üstten 50px boşluk, sağ-sol otomatik ortalama */
+    background-color: #222; /* Film kartlarıyla aynı koyu gri */
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0,0,0, 0.5); 
+    color: white;
+}
+
+/* 2. Başlık Ayarı */
+.giris-kutusu h2 {
+    text-align: center; /* Ortala */
+    border-left: none; /* Kırmızı çizgiyi kaldır */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 0;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* 3. Form Grupları (Label ve Input arası boşluk) */
+.form-grubu {
+    margin-bottom: 20px; /* Her kutucuk arası boşluk */
+}
+
+/* 4. Etiketler */
+.giris-kutusu label {
+    display: block; /* Alt satıra geçsin */
+    margin-bottom: 8px; /* Input ile arası açılsın */
+    color: #bbb; 
+    font-size: 14px;
+}
+
+/* 5. Girdi Kutuları */
+.giris-kutusu input {
+    width: 100%; /* Kutuyu tam doldursun */
+    padding: 12px;
+    background-color: #333; 
+    border: 1px solid #444; 
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    outline: none; /* Tıklayınca mavi çizgi çıkmasın */
+}
+
+/* Input'a tıklayınca (Focus) */
+.giris-kutusu input:focus {
+    border-color: #e50914;
+    background-color: #444;
+}
+
+/* 6. Giriş Yap Butonu */
+.giris-kutusu button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.giris-kutusu button:hover {
+    background-color: white;
+    color: #e50914;
+}
+
+/* 7. Alt Link */
+.ekstra-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+.ekstra-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.ekstra-link a:hover {
+    text-decoration: underline;
+}
+
+.arkaplan{
+    background-image:   
+        linear-gradient(to top, #141414 0%, rgba(20, 20, 20, 0) 20%), 
+        linear-gradient(to left, rgba(0,0,0, 0.7), rgba(0,0,0, 0.1)),
+        linear-gradient(to right, rgba(0,0,0, 0.6), rgba(0,0,0, 0.1)),
+        url(resimler/loginBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; /* sayfa uzasa bile resmin olduğu yerde sabit kalması için */
+}
